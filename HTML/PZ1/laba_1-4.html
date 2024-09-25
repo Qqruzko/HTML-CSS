@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>Lab_04</title>
+    </head>
+   <body>
+    <h1>Lab 04 - simple class </h1>
+        <script>
+            (function()
+            {
+                "use strict";
+                // collection object
+                // var NewClass = new Object();
+                //NewClass.title = "This is title";
+                //NewClass.url = "www.google.com";
+                function NewClass(title,url)
+                {
+                        this.title = title;
+                        this.url = url;
+                        function show()  
+                    {
+                        document.write(NewClass.title + " - "+ 
+                        NewClass.url);
+                    }
+                }
+                var example = new NewClass("This is title","www.google.com");
+                example.show();
+            }());
+        </script>
+   </body>
+</html>
+
+

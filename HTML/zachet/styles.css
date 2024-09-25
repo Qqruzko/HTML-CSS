@@ -1,0 +1,37 @@
+body{
+    font-family: "Gill Sans Extrabold", sans-serif;
+
+}
+a:link    {color:blue; text-decoration:none}
+            a:visited {color:pink; text-decoration:none}
+            a:hover   {color:red; text-decoration:underline}
+            a:active  {color:yellow; text-decoration:underline}
+            input:hover {border:2px solid red;}
+#header{
+    text-align: center;
+    font-style: bold;
+    letter-spacing: 2px;
+    font-size: 60px;
+    margin: 10px;
+    height: 80px;
+    background-color: #0066b2;
+}
+#box {
+    border-radius: 10px;
+    }
+    
+#legend{
+    font-style: bold;
+    letter-spacing: 2px;
+    font-size: 20px;
+    margin: 20px;
+    background-color: #d6d5d5;
+}
+#footer{
+    font-size: 20px;
+    margin: 10px;
+    height: 30px;
+    background-color: #8F9779;
+    text-shadow:0px 4px #ffffff;
+
+}

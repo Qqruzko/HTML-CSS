@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>METANIT.COM</title>
+</head>
+<body>
+<canvas id="canvas" width="400" height="250"></canvas>
+<script>
+const canvas = document.getElementById("canvas");
+const context = canvas.getContext("2d");
+const gradient = context.createLinearGradient(50, 30, 150, 150);
+gradient.addColorStop(0, "red");       // от синего цвета
+gradient.addColorStop(0.4, "purple");       // от синего цвета
+gradient.addColorStop(0.5, "green");       // от синего цвета
+gradient.addColorStop(0.65, "teal");       // от синего цвета
+gradient.addColorStop(1, "yellow");      // к белому цвету
+context.fillStyle = gradient;           // в качестве цвета заполнения устанавливаем градиент
+context.fillRect(50, 30, 150, 150);
+context.strokeRect(50, 30, 150, 150);
+
+<div class="dots">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    viewBox="0 0 24 24"
+    class="dots-icon"
+  >
+    <path
+      d="M16 12a3.001 3.001 0 016 0 3.001 3.001 0 01-6 0zm1 0a2 2 0
+        114.001.001A2 2 0 0117 12zm-8 0a3.001 3.001 0 016 0 3.001 3.001 0
+        01-6 0zm1 0a2 2 0 114.001.001A2 2 0 0110 12zm-8 0a3.001 3.001 0 016
+        0 3.001 3.001 0 01-6 0zm1 0a2 2 0 114.001.001A2 2 0 013 12z"
+    />
+  </svg>
+</div>
+</script>
+
+
+
+</body>
+</html>

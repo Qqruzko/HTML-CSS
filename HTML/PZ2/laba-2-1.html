@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+    <head> 
+        <meta charset="utf-8" />
+        <title>Apple resize</title>
+        <script>
+            (function()
+            {
+                var img_width = "320px";
+                var img_height = "320px";
+                var img = document.getElementByID("apl");
+                var stat = document.getElementById('status');
+                img.onclick = function imgResize()
+                {
+                    "use strict";
+                    if ((document.getElementById("apl").style.width == img_width)&&(document.getElementById("apl").style.height == img_height))
+                    {
+                        document.getElementById("apl").style.width = "500px";
+                        document.getElementById("apl").style.width = "500px";
+                    }
+                    else
+                    {
+                        document.getElementById("apl").style.width = "320px";
+                        document.getElementById("apl").style.width = "320px";
+                    }
+                }
+                stat.onload =  loadPage() 
+                {
+                    "use strict";
+                    document.getElementById('status').style.display = 'block';
+                }
+            }());
+        </script>
+        <title>Lab_01</title>
+    </head>
+    <body onload="loadPage()">
+        <h1>Lab 01 - image resizing </h1>
+        <img src="apple.jpg" width="320px" height="320px" id="apl" >
+        <p id="status">Page is loaded</p>
+    </body>
+   
+</html>
+
+<!-- 
+    1.	Создайте HTML-документ laba-2-1.html.
+2.	Добавьте в HTML-документ графический объект в формате jpeg, png или gif 
+(например, файл из папки /H5_C3_JS/Практика/ Модуль 3/apple.jpg).
+3.	Напишите скрипт, который будет курсора увеличивать размер картинки в 2 
+раза при клике левой кнопкой мыши по ней и уменьшать ее при повторном клике.
+
+-->

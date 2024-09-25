@@ -1,0 +1,136 @@
+<html>
+<head>
+<link rel=stylesheet type="text/css" href="/c/main.css">
+<meta content="text/html; charset=windows-1251" http-equiv=Content-type>
+<meta http-equiv=cache-control content=no-cache>
+<meta http-equiv=pragma content=no-cache>
+<meta http-equiv=expires content=0>
+<title>Контакты</title>
+<script language="javascript" src="/j/win.js"></script>
+<script language="javascript" src="/j/shortkeys.js"></script>
+<script language="javascript" src="/j/friends.js"></script>
+<script language="JavaScript" type="text/javascript">
+<!--
+//-->
+</script>
+</head>
+<body class="mainarea">
+<div id="hint1" class="hint"></div>
+<div id=win1 class=win></div>
+<table class="mainarea">
+    <tr>
+<td width=100% id=cols style="padding-top: 0px">
+
+
+<table class="tabs_body">
+<tr>
+<td id="tabarea" style="text-align: left">
+
+<!-- BEGIN BODY-->
+
+
+
+<form name="memo_form" method="POST">
+<input type="hidden" name="cmd" value="memo.store">
+<input type="hidden" name="nd" value="9360166715">
+Использовано&nbsp;<span id="memo_counter"></span>&nbsp;символов из 2000<br>
+<table width="100%" border="0">
+<tr>
+<td width="100%" style="padding: 0px 15px 0px 0px;">
+<textarea name="memo" rows="20" cols="100" wrap="soft" style="background-image: url('http://img.carnage.ru/i/contacts/back.gif'); font-weight: bold; color: #554fa6;" onKeyUp="memo_count_length();"></textarea>
+</td>
+<td valign="top">
+<input class="button" type="button" value="Сохранить" onClick="memo_store();"><br><br>
+<input class="button" type="button" value="Очистить" onClick="memo_clear();">
+</td>
+</tr>
+</table>
+</form>
+<script language="JavaScript" type="text/javascript">
+<!--
+memo_count_length();
+//-->
+</script>
+
+<!-- END BODY //-->
+</td>
+</tr>
+</table>
+</td>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-663575-1";
+urchinTracker();
+</script>
+&nbsp;
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+function sol(room) { if (top.CtrlPress) { window.open('/online.pl?room='+room+'&'+Math.random(),'onlines','width=300,height=500,toolbar=no,location=no,scrollbars=yes,resizable=yes') } else { window.location.href='map.pl?cmd=move&map='+room+'&'+Math.random() } }
+function confirm_fee( room, fee ) {
+    if ( top.CtrlPress ) {
+        window.open('/online.pl?room='+room+'&'+Math.random(),'onlines','width=300,height=500,toolbar=no,location=no,scrollbars=yes,resizable=yes');
+        return false;
+
+    }
+
+    var value = 0;
+    var currency = '';
+    var oRegExp = new RegExp( "^([0-9\.]+)(\\w)(\\w?)$" );
+
+    if ( oRegExp.exec( fee ) ) {
+        value = RegExp.$1;
+        currency = RegExp.$2;
+
+        var userLevel = 0;
+
+        if ( typeof( user_level ) != 'undefined' && user_level ) {
+            userLevel = user_level;
+        } else if ( typeof( user ) != 'undefined' && user.level ) {
+            userLevel = user.level;
+        }
+
+        if ( RegExp.$3 == 'l' && userLevel ) {
+            value = user_level * Math.round( 100 * value ) / 100;
+        }
+
+    } else {
+        return sol(room);
+    }
+
+    if ( currency == 's' ) {
+        currency = 'стц.'
+    } else {
+        currency = 'фл.'
+    }
+
+    if ( confirm( 'Посещение этой локации стоит ' + value + ' ' + currency + '\nПосетить?' ) ) {
+        return sol(room);
+    } else {
+        return false;
+    }
+
+}
+</script>

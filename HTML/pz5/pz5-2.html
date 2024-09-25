@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+</head>
+<body>
+
+<form action="#" class="container-menu">
+<input id="name" type="text" name="name" value="">
+<input id="number" type="text" name="number" value="">
+<button onclick="saveData()" type="button">Добавить</button>
+<button onclick="delete_data()" type="button">Delete</button>
+</form>
+
+
+<script>
+function saveData()
+{
+let mas=[];
+let mas_num=[];
+
+
+mas=JSON.parse(localStorage.getItem('data_list'));
+mas_num=JSON.parse(localStorage.getItem('numbers_list'));
+
+
+const name = document.getElementById('name');
+const number = document.getElementById('number');
+
+mas.push(name.value);
+mas_num.push(number.value);
+
+let save=JSON.stringify(mas);
+let save_num=JSON.stringify(mas_num);
+
+localStorage.setItem('data_list', save);
+console.log(localStorage.getItem('data_list'));
+
+localStorage.setItem('numbers_list', save_num);
+console.log(localStorage.getItem('numbers_list'));
+}
+
+function delete_data()
+{
+localStorage.clear();
+console.log(localStorage.getItem('data_list'));
+localStorage.clear();
+console.log(localStorage.getItem('numbers_list'));
+}
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Forms</title>
+    <script src="js/modernizr.js"></script>
+    <script src="js/forms.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+</head>
+<body>
+    <header id="header">WebSite Tamplate forms</header>
+    <div>Работа с формами</div>
+    <fieldset>
+	
+	
+        <label for="name">Имя:</label>
+        <input type="text" id="name" placeholder="Введите имя">
+        <br>
+        <label for="phone">Телефон:</label>
+        <input type="text" id="phone" placeholder="Введите телефон">
+        <br>
+        <label for="Age">Возраст:</label>
+        <input type="number" id="age" placeholder="Введите возраст">
+        <br>
+        <label for="Email">Возраст:</label>
+        <input type="email" id="email" placeholder="Введите почту">
+        <br>
+        <button id="addButton">Добавить</button>
+		
+    </fieldset>
+	
+	
+	
+    <h2>Записи</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Имя</th>
+            <th>Телефон</th>
+            <th>Возраст</th>
+            <th>Почта</th>
+            <th>Действие</th>
+        </tr>
+        </thead>
+        <tbody id="contactList"></tbody>
+    </table>
+
+    <footer id="footer">Krasnopevcev M.K.</footer>
+</body>
